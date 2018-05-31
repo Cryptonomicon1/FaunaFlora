@@ -1,0 +1,12 @@
+# Random Fauna-Flora Generator
+
+This is some quickly spit out code that generates random animals and plants. I wrote this for linux, but anyone can download the .csv files for use. I used the dice roll tables and system who's pdfs I left in here. This was a detailed system. I strongly recommend you read the .pdf files before reading my code. My outputs are in .csv format so the output files can be imported into Excel, Open Office Calc, or Libre Office Calc. Then the results can be filtered for quick finds.
+
+In my defense, I did not write many little functions for three reasons.
+1. I started by assuming that every animal trait and every plant trait would be a unique function. So, writing a function per trait would take far more lines of code and would not improve readibility, program flexibility, or efficiency.
+1. The addition of each trait does not require much cross talk, and therefor the risks mitigated by function encapsulation are tiny.
+1. I don't plan to improve or change this program in the future. The dice roll system that I copied was made years ago and has not changed. I predict it won't change in the future. If someone wishes to use my program, I would be happy to re-write with functions to help future users. However, my intention is to give this program away to be used as-is.
+
+Although in retrospect, I will mention that I noticed a few trends for how each dice roll table is used. Some dice roll tables are used without re-rolling. Some dice roll tables are used, and if the output is, "Re-Roll," then two rolls will take place where the dice are modified from a d100 to a d98 or whatever number is required to ignore the, "Re-Roll," outcome. A function could be written that accepts a table, makes a dice roll, and simply outputs the result. A function could be written that accepts the table, and the re-roll dice range to accomplish this. There would be a few more functions to be made for some more unique uses of tables, but I might have been able to write 8? functions to cover all cases. I don't know how I could have seen these trends beforehand. Hindsight is 20/20.
+
+Other than my own earlier critique, I might have put more comments and used switch cases instead of if else statements to speed up programming, but again, I spit out this program quickly for the grander purpose of building my world, and I wanted the coding to get out of my way instead of taking my time. I publish this to help others do the same.
