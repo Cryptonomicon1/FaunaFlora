@@ -29,6 +29,7 @@ int main() {
 		R.Record("Flora" + to_string(i+1) + ".csv");
 		cout << "Flora File: " << to_string(i+1) << " / " << file_count << "\n";
 	};
+	R.Del();
 	TabMan.MakeAnimal();
 	R.Save(TabMan.getFaunaNams());
 

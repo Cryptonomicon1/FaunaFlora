@@ -24,6 +24,7 @@ public:
 	//Functions
 	void Save(vector<string>);
 	void Record(string);
+	void Del();
 
 private:
 	//Variables
@@ -31,6 +32,7 @@ private:
 
 	//Functions
 	void Write(string, string);
+	vector<vector<string>> DelElems(vector<vector<string>>);
 };
 Rec::Rec() {
 }
@@ -49,11 +51,22 @@ void Rec::Record(string file) {
 		out += '\n';
 	};
 	Write(file, out);
+	animals = DelElems(animals);
 }
 void Rec::Write(string file, string out) {
 	ofstream men;
 	men.open(file);
 	men << out;
 	men.close();
+}
+void Rec::Del() {
+	animals.clear();
+}
+// Private
+vector<vector<string>> Rec::DelElems(vector<vector<string>> temp1) {
+	vector<string> temp2 = temp1[0];
+	temp1.clear();
+	temp1.push_back(temp2);
+	return temp1;
 }
 #endif
